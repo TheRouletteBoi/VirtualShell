@@ -15,10 +15,8 @@
 *.so
 *.dylib
 *.dll
-
-# Fortran module files
-*.mod
-*.smod
+*.sprx
+*.prx
 
 # Compiled Static libraries
 *.lai
@@ -30,3 +28,19 @@
 *.exe
 *.out
 *.app
+
+
+.vscode
+.vs
+build/
+bin/
+bin-int/
+*.suo
+*.db
+*.db-shm
+*.db-wal
+*.opendb
+*.sln
+*.vcxproj
+*.user
+*.filters
