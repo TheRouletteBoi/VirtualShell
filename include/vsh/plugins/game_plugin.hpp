@@ -1,9 +1,13 @@
 #ifndef __GAME_PLUGIN_HPP__
 #define __GAME_PLUGIN_HPP__
 
-// Interface 1
+#define _VSH_BEGIN namespace vsh {
+#define _VSH_END }
 
-class game_plugin_interface_t
+_VSH_BEGIN
+
+// Interface 1
+class GamePluginInterface
 {
 public:
     int(*DoUnk0)(void);                                       // 0 Parameter: - set Widget "page_game_main" and activate
@@ -112,5 +116,7 @@ public:
     int(*DoUnk103_DeleteGame)(char *);                        // 1 Parameter: char * dirname -> 67) "DeleteGame" delete game with memory container -1
     int(*DoUnk104)(char *);                                   // 1 Parameter: char * pkg?_filepath
 };
+
+_VSH_END
 
 #endif // __GAME_PLUGIN_HPP__

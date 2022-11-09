@@ -1,10 +1,13 @@
 #ifndef __SYSTEM_PLUGIN_HPP__
 #define __SYSTEM_PLUGIN_HPP__
 
+#define _VSH_BEGIN namespace vsh {
+#define _VSH_END }
+
+_VSH_BEGIN
 
 // Interface 1
-
-class system_plugin_interface_t
+class SystemPluginInterface
 {
 public:
     int(*DoUnk0)(const char *, int);										// char * , int flags - dev_hdd0/theme related, loads theme?
@@ -44,5 +47,7 @@ public:
     int(*DoUnk34)(void);													// Dummy XMB stop (DEX)
     int(*DoUnk35)(void);													// Dummy XMB start/stop (DEX)
 };
+
+_VSH_END
 
 #endif // __SYSTEM_PLUGIN_HPP__
