@@ -6,4 +6,4 @@ This repository contains a few classes reverse engineered by Mysis, 3141card, al
 
 This is to be used as a sub-module for your vsh project.
 
-You must include #include <vsh/newDelete.hpp> in your main.cpp for everything to function properly
+You must include `#include <vsh/newDelete.hpp>` in your main.cpp for everything to function properly
