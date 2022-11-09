@@ -166,7 +166,7 @@ namespace paf
         }
 
         float magnitude() {
-            return stdc::sqrtf(dot(*this));
+            return vsh::sqrtf(dot(*this));
         }
 
         float dot(vec2 vec) {
@@ -354,7 +354,7 @@ namespace paf
         }
 
         float magnitude() {
-            return stdc::sqrtf(dot(*this));
+            return vsh::sqrtf(dot(*this));
         }
 
         float dot(vec3 vec) {
@@ -544,7 +544,7 @@ namespace paf
         }
 
         float magnitude() {
-            return stdc::sqrtf(dot(*this));
+            return vsh::sqrtf(dot(*this));
         }
 
         float dot(vec4 vec) {

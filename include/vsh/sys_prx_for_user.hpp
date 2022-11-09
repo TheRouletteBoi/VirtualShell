@@ -5,6 +5,9 @@
 #include <sys/mempool.h> // for sys_mempool_t
 #include <sys/spu_utility.h> // for sys_spu_image_t
 #include <sys/prx.h> // for sys_prx_id_t
+#include <yvals.h> // for _CSTD
+#include <xstddef> // for _THROW1
+#include <new> // for nothrow_t
 
 namespace sysPrxForUser
 {
