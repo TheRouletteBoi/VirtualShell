@@ -1,55 +1,6 @@
 #ifndef __XSETTING_HPP__
 #define __XSETTING_HPP__
 
-#include <vsh/vshcdefs.hpp>
-
-_VSH_BEGIN
-CDECL_BEGIN
-
-class xsetting_0AF1F161_t;
-class xsetting_154430FC_t;
-class xsetting_16A8A805_t;
-class xsetting_1D6D60D4_t; // printer
-class xsetting_43F98936_t;
-class xsetting_4712F276_t;
-class xsetting_58560CA4_t;
-class xsetting_5FB90B89_t; // bluetooth ?
-class xsetting_660ECC35_t;
-class xsetting_69C19C7F_t;
-class xsetting_7125FEB5_t;
-class xsetting_7EDDAD29_t;
-class xsetting_8B69F85A_t;
-class xsetting_9EE60B4E_t;
-class xsetting_C1008335_t; // io_mouse ?
-class xsetting_CC56EB2D_t;
-class xsetting_CE27E884_t;
-class xsetting_D0261D72_t;
-class xsetting_ED5B559F_t;
-class xsetting_F48C0548_t;
-class xsetting_FFAF9B19_t;
-
-xsetting_0AF1F161_t* xsetting_0AF1F161(void); // xsettings
-xsetting_154430FC_t* xsetting_154430FC(void);
-xsetting_16A8A805_t* xsetting_16A8A805(void);
-xsetting_1D6D60D4_t* xsetting_1D6D60D4(void);
-xsetting_43F98936_t* xsetting_43F98936(void);
-xsetting_4712F276_t* xsetting_4712F276(void);
-xsetting_58560CA4_t* xsetting_58560CA4(void);
-xsetting_5FB90B89_t* xsetting_5FB90B89(void);
-xsetting_660ECC35_t* xsetting_660ECC35(void);
-xsetting_69C19C7F_t* xsetting_69C19C7F(void);
-xsetting_7125FEB5_t* xsetting_7125FEB5(void);
-xsetting_7EDDAD29_t* xsetting_7EDDAD29(void);
-xsetting_8B69F85A_t* xsetting_8B69F85A(void);
-xsetting_9EE60B4E_t* xsetting_9EE60B4E(void);
-xsetting_C1008335_t* xsetting_C1008335(void);
-xsetting_CC56EB2D_t* xsetting_CC56EB2D(void); // xuser
-xsetting_CE27E884_t* xsetting_CE27E884(void);
-xsetting_D0261D72_t* xsetting_D0261D72(void); //xregistry
-xsetting_ED5B559F_t* xsetting_ED5B559F(void);
-xsetting_F48C0548_t* xsetting_F48C0548(void); // xnet
-xsetting_FFAF9B19_t* xsetting_FFAF9B19(void);
-
 class xsetting_0AF1F161_t
 {
 public:
@@ -951,8 +902,28 @@ public:
     //int (*sub_45DF04) ?
 };
 
+CDECL_BEGIN
+xsetting_0AF1F161_t* xsetting_0AF1F161(void); // xsettings
+xsetting_154430FC_t* xsetting_154430FC(void);
+xsetting_16A8A805_t* xsetting_16A8A805(void);
+xsetting_1D6D60D4_t* xsetting_1D6D60D4(void);
+xsetting_43F98936_t* xsetting_43F98936(void);
+xsetting_4712F276_t* xsetting_4712F276(void);
+xsetting_58560CA4_t* xsetting_58560CA4(void);
+xsetting_5FB90B89_t* xsetting_5FB90B89(void);
+xsetting_660ECC35_t* xsetting_660ECC35(void);
+xsetting_69C19C7F_t* xsetting_69C19C7F(void);
+xsetting_7125FEB5_t* xsetting_7125FEB5(void);
+xsetting_7EDDAD29_t* xsetting_7EDDAD29(void);
+xsetting_8B69F85A_t* xsetting_8B69F85A(void);
+xsetting_9EE60B4E_t* xsetting_9EE60B4E(void);
+xsetting_C1008335_t* xsetting_C1008335(void);
+xsetting_CC56EB2D_t* xsetting_CC56EB2D(void); // xuser
+xsetting_CE27E884_t* xsetting_CE27E884(void);
+xsetting_D0261D72_t* xsetting_D0261D72(void); //xregistry
+xsetting_ED5B559F_t* xsetting_ED5B559F(void);
+xsetting_F48C0548_t* xsetting_F48C0548(void); // xnet
+xsetting_FFAF9B19_t* xsetting_FFAF9B19(void);
 CDECL_END
-_VSH_END
-
 
 #endif // __XSETTING_HPP__

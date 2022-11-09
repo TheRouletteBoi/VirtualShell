@@ -1,10 +1,6 @@
 #ifndef __FRIENDIM_PLUGIN_HPP__
 #define __FRIENDIM_PLUGIN_HPP__
 
-#include <vsh/vshcdefs.hpp>
-
-_VSH_BEGIN
-
 // Interface 1
 
 class friendim_plugin_interface_t
@@ -52,7 +48,5 @@ public:
     int(*DoUnk39)(void);
     int(*TellFriend)(void);
 };
-
-_VSH_BEGIN
 
 #endif // __FRIENDIM_PLUGIN_HPP__

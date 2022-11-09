@@ -1,11 +1,6 @@
 #ifndef __ESECRON_HPP__
 #define __ESECRON_HPP__
 
-#include <vsh/vshcdefs.hpp>
-
-_VSH_BEGIN
-CDECL_BEGIN
-
 // esecron_0C8D7A60  // ?
 // esecron_179B1B1B  // ?
 // esecron_2411334A  // ?
@@ -53,7 +48,4 @@ CDECL_BEGIN
 // esecron_F421B2ED  // ?
 // esecron_F9889F5B  // ?
 
-CDECL_END
-_VSH_END
-
-#endif // __ESECRON_HPP__ 
+#endif // __ESECRON_HPP__

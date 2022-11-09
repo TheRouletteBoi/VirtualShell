@@ -1,9 +1,6 @@
 #ifndef __SYSTEM_PLUGIN_HPP__
 #define __SYSTEM_PLUGIN_HPP__
 
-#include <vsh/vshcdefs.hpp>
-
-_VSH_BEGIN
 
 // Interface 1
 
@@ -47,7 +44,5 @@ public:
     int(*DoUnk34)(void);													// Dummy XMB stop (DEX)
     int(*DoUnk35)(void);													// Dummy XMB start/stop (DEX)
 };
-
-_VSH_END
 
 #endif // __SYSTEM_PLUGIN_HPP__

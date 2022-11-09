@@ -1,10 +1,6 @@
 #ifndef __PS3_SAVEDATA_PLUGIN_HPP__
 #define __PS3_SAVEDATA_PLUGIN_HPP__
 
-#include <vsh/vshcdefs.hpp>
-
-_VSH_BEGIN
-
 // Interface 1
 
 class ps3_savedata_plugin_interface_t
@@ -70,6 +66,4 @@ public:
     int(*DoUnk57)(void);
 };
 
-_VSH_END
-
-#endif // __PS3_SAVEDATA_PLUGIN_HPP__
+#endif  // __PS3_SAVEDATA_PLUGIN_HPP__

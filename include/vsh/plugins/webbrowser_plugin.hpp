@@ -1,10 +1,6 @@
 #ifndef __WEBBROWSER_PLUGIN_HPP__
 #define __WEBBROWSER_PLUGIN_HPP__
 
-#include <vsh/vshcdefs.hpp>
-
-_VSH_BEGIN
-
 // Interface 1
 
 class webbrowser_plugin_interface_t
@@ -31,7 +27,5 @@ class webbrowser_plugin_act0_t
 public:
     int(*Action)(const char *);
 };
-
-_VSH_END
 
 #endif // __WEBBROWSER_PLUGIN_HPP__

@@ -1,10 +1,6 @@
 #ifndef __IMPOSE_PLUGIN_HPP__
 #define __IMPOSE_PLUGIN_HPP__
 
-#include <vsh/vshcdefs.hpp>
-
-_VSH_BEGIN
-
 // Interface 1
 
 class impose_plugin_interface_t
@@ -30,7 +26,5 @@ public:
     int(*DoUnk17)(int);           // Set impose psbutton notification not ingameXMB, 1 Parameter: uint - (0 = BeginInGameXMB ,1 =  _notification_psbutton)
     int(*DoUnk18)(void);          // 0 Parameter
 };
-
-_VSH_END
 
 #endif // __IMPOSE_PLUGIN_HPP__

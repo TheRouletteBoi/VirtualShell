@@ -1,10 +1,6 @@
 #ifndef __GAME_PLUGIN_HPP__
 #define __GAME_PLUGIN_HPP__
 
-#include <vsh/vshcdefs.hpp>
-
-_VSH_BEGIN
-
 // Interface 1
 
 class game_plugin_interface_t
@@ -116,7 +112,5 @@ public:
     int(*DoUnk103_DeleteGame)(char *);                        // 1 Parameter: char * dirname -> 67) "DeleteGame" delete game with memory container -1
     int(*DoUnk104)(char *);                                   // 1 Parameter: char * pkg?_filepath
 };
-
-_VSH_END
 
 #endif // __GAME_PLUGIN_HPP__

@@ -1,11 +1,6 @@
 #ifndef __MMS_DB_HPP__
 #define __MMS_DB_HPP__
 
-#include <vsh/vshcdefs.hpp>
-
-_VSH_BEGIN
-CDECL_BEGIN
-
 // mms_db_003952CA  // ?
 // mms_db_00725E38  // ?
 // mms_db_01C95E18  // ?
@@ -570,7 +565,4 @@ CDECL_BEGIN
 // mms_db_FEF03153  // ?
 // mms_db_FF1EA2F5	//	_ZN12DBFileStreamC1Ev	
 
-CDECL_END
-_VSH_END
-
-#endif // __MMS_DB_HPP__ 
+#endif // __MMS_DB_HPP__

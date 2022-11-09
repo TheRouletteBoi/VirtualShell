@@ -1,10 +1,6 @@
 #ifndef __GAME_EXT_PLUGIN_HPP__
 #define __GAME_EXT_PLUGIN_HPP__
 
-#include <vsh/vshcdefs.hpp>
-
-_VSH_BEGIN
-
 // Interface 1
 
 class game_ext_plugin_interface_t
@@ -46,7 +42,5 @@ public:
     int(*DoUnk33)(char*);						// 1 Parameter: char * titleid? [0x10] - msg auto update? - psn+/login checked.
     int(*installPKG)(char*);					// 1 Parameter: char * pkg_path[0x400] (example: /dev_usb006/test.pkg)
 };
-
-_VSH_END
 
 #endif // __GAME_EXT_PLUGIN_HPP__

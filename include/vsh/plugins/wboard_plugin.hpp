@@ -1,10 +1,6 @@
 #ifndef __WBOARD_PLUGIN_HPP__
 #define __WBOARD_PLUGIN_HPP__
 
-#include <vsh/vshcdefs.hpp>
-
-_VSH_BEGIN
-
 // Interface 1
 
 class wboard_plugin_interface_t
@@ -35,7 +31,5 @@ public:
     int(*DoUnk2)(void);
     int(*DoUnk3)(int);
 };
-
-_VSH_END
 
 #endif // __WBOARD_PLUGIN_HPP__

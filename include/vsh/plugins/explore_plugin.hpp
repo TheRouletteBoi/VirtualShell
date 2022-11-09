@@ -1,10 +1,6 @@
 #ifndef __EXPLORE_PLUGIN_HPP__
 #define __EXPLORE_PLUGIN_HPP__
 
-#include <vsh/vshcdefs.hpp>
-
-_VSH_BEGIN
-
 // Interface 1
 
 class explore_plugin_interface_t
@@ -42,6 +38,5 @@ public:
     int(*DoUnk29)(char *, void *);						// 2 Parameter: char * ,
 };
 
-_VSH_BEGIN
 
 #endif // __EXPLORE_PLUGIN_HPP__

@@ -1,11 +1,7 @@
 #ifndef __NEWDELETE_HPP__
 #define __NEWDELETE_HPP__
 
-#include <yvals.h> // for _CSTD
-#include <xstddef> // for _THROW1
-#include <new> // for nothrow_t
-//#include <vsh/allocator.hpp>
-#include <vsh/sys_prx_for_user.hpp>
+#include "sys_prx_for_user.hpp"
 
 // Override the new/delete operator cuz the sprx ones are brokey
 // not sure why i crash when using allocator exports so i use the
