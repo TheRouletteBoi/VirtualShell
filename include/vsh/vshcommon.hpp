@@ -2,6 +2,7 @@
 #define __VSHCOMMON_HPP__
 
 #include "paf.hpp"
+#include "vshmain.hpp"
 
 namespace vsh
 {
@@ -99,9 +100,11 @@ namespace vsh
     // vshcommon_F06004CD  // ?
 
     int vshcommon_A20E43DB(int r3, const char* eventName, int r5, paf::SurfacePtr& texture, void* r7, const char* r8, const char* r9, float f1, const wchar_t* text, int r13, bool isLooped, int r14);
-    static int ShowNotificationWithIcon(paf::SurfacePtr& texture, wchar_t const* text, bool isLooped = false) {
+    
+    static int ShowNotificationBySurfaceTexture(paf::SurfacePtr& texture, wchar_t const* text, bool isLooped = false)
+    {
         int unknownOut = 0;
-        return vshcommon_A20E43DB(0, "", 0, texture, &unknownOut, "", "", 0.0, text, 0, isLooped, 0);
+        return vshcommon_A20E43DB(0, "", 0, texture, &unknownOut, "", "", 0.0f, text, 0, isLooped, 0);
     }
     
     void vshcommon_7504447B(void); // null subroutine 
@@ -253,16 +256,96 @@ namespace vsh
 
     CDECL_END
 
+    enum class NotifyIcon
+    {
+        // system_plugin
+        Info,
+        Caution,
+        Friend,
+        Slider,
+        WrongWay,
+        Dialog,
+        DalogShadow,
+        Text,
+        Pointer,
+        Grab,
+        Hand,
+        Pen,
+        Finger,
+        Arrow,
+        ArrowRight,
+        Progress,
+        Trophy1,
+        Trophy2,
+        Trophy3,
+        Trophy4,
+        Keypad,
+        Mediaserver,
+        Music,
+        Settings,
+        Triangle,
+
+        // explore_plugin
+        PS3,
+        PS4,
+        Vita,
+        DefaultAvatar,
+        Lock,
+        PlusSign,
+        WhiteController,
+        BlueDisc,
+        BrownDisc,
+        GrayDisc,
+        Walkman,
+        PSButtons,
+        Error,
+        Pause,
+        Facebook,
+        Rench,
+        PSNFolder,
+        BronzeStarTrophy,
+        PSStore,
+        PS3Logo,
+        BlueVerifiedCheckmark,
+        Blocked,
+        AFK,
+        OrangeWait,
+        BlueCircle,
+        RedCirleCross,
+        OrangeCircleNEW,
+        PSPlus,
+        PSPlusBig,
+        PSNIcon,
+        PSNIconBig,
+        RedExclamationPoint
+    };
+
+    enum class NotifySound
+    {
+        None = -1,
+        Cancel = 0,
+        CategoryDecide,
+        Cursor,
+        Decide,
+        Error,
+        Option,
+        NG,
+        OK,
+        Trophy,
+    };
+
     class NavigationMessage
     {
     public:
         // NavigationMessage(paf::PhWidget* parent, const std::wstring& message, int r6, int r7); // sub_34D938
-        ~NavigationMessage() {
+        ~NavigationMessage() 
+        {
             m_Data._byte_0x10 = 1;
             vshcommon_21806775(this);
         }
 
-        void SetDuration(float duration) { // idk if its related to the duration   xD
+        void SetDuration(float duration) // idk if its related to the duration   xD
+        { 
             vshcommon_F1918912(this, duration);
         }
 
@@ -305,21 +388,83 @@ namespace vsh
     // L"\uF893" = Dualshock L2 buttonD-Pad LEFT Button-Combo
     // L"\uF894" = Dualshock R2 buttonD-Pad RIGHT Button-Combo
 
-    static void ShowNavigationMessage(wchar_t const* message) {
+    static void ShowNavigationMessage(wchar_t const* message) 
+    {
         static NavigationMessage* previousNavMsg = nullptr;
 
-        paf::View* system_plugin = paf::View::Find("system_plugin");
-        paf::PhWidget* page_autooff_guide = system_plugin ? system_plugin->FindWidget("page_autooff_guide") : nullptr;
+        paf::View* systemPlugin = paf::View::Find("system_plugin");
+        paf::PhWidget* pageAutoOffGuide = systemPlugin ? systemPlugin->FindWidget("page_autooff_guide") : nullptr;
 
-        if (page_autooff_guide) {
-            if (previousNavMsg) {
+        if (pageAutoOffGuide)
+        {
+            if (previousNavMsg) 
+            {
                 previousNavMsg->~NavigationMessage();
                 previousNavMsg = nullptr;
             }
 
-            previousNavMsg = vshcommon_F55812AE(page_autooff_guide, message, 4, 0);
+            previousNavMsg = vshcommon_F55812AE(pageAutoOffGuide, message, 4, 0);
         }
     }
+
+    static void ShowNotificationWithIcon(const std::wstring& text, NotifyIcon notifyType, NotifySound soundType = NotifySound::Trophy)
+    {
+        paf::View* explorePlugin = paf::View::Find("explore_plugin");
+        paf::View* systemPlugin = paf::View::Find("system_plugin");
+
+        if (!systemPlugin)
+            return;
+
+        const char* systemPlugin_SoundNames[] =
+        {
+           "snd_cancel", "snd_category_decide", "snd_cursor", "snd_decide",
+           "snd_error", "snd_option", "snd_system_ng", "snd_system_ok", "snd_trophy"
+        };
+
+        const char* notification_TextureNames[] =
+        {
+            // "system_plugin"
+            "tex_notification_info", "tex_notification_caution", "tex_notification_friend",
+            "tex_default_scroll_slider", "tex_notification_psbutton_insensitive", "tex_common_dialog",
+            "tex_common_dialog_shadow", "tex_3x3_focus", "tex_pointer_click", "tex_pointer_grab",
+            "tex_pointer_hand", "tex_pointer_pen", "tex_pointer_finger", "tex_pointer_arrow",
+            "tex_arrow_right", "tex_default_progress_slider", "tex_notification_trophy_bronze",
+            "tex_notification_trophy_silver", "tex_notification_trophy_gold",
+            "tex_notification_trophy_platinum", "tex_notification_keypad", "tex_notification_mediasever",
+            "tex_notification_music", "tex_notification_settings", "tex_triangle",
+
+            // "explore_plugin" & "explore_plugin_full"
+            "item_tex_ps3format", "item_tex_ps4format", "item_tex_vitaformat", "tex_Avatar_Default",
+            "tex_lock_icon", "trophy_tex_addon", "game_tex_load", "item_tex_disc_bd", "item_tex_disc_dvd",
+            "item_tex_disc_icon", "item_tex_walkman", "ps3sd_tex_default", "bgdl_tex_error", "bgdl_tex_pause",
+            "item_tex_cam_facebook", "item_tex_cam_icon", "item_tex_online_storage", "item_tex_Profile_LevelIcon",
+            "item_tex_ps_store", "item_tex_ps3logo", "tex_check_ws", "tex_go_bubu", "tex_indi_AFK", "tex_indi_NewRoom",
+            "tex_indi_Sign_in", "tex_indi_Sign_out", "tex_new_ws", "tex_psplus_icon", "tex_ps_plus_invitation",
+            "tex_psn", "tex_psn_big", "tex_urgent_ws"
+        };
+
+        paf::SurfacePtr pTexture = paf::SurfacePtr();
+        if (explorePlugin != nullptr && GetCooperationMode() == CooperationMode::XMB)
+        {
+            if (notifyType < NotifyIcon::PS3)
+                pTexture = systemPlugin->GetTexture(notification_TextureNames[(int)notifyType]); // explore_plugin icons
+            else
+                pTexture = explorePlugin->GetTexture(notification_TextureNames[(int)notifyType]); // system_plugin icons
+        }
+        else
+        {
+            if (notifyType < NotifyIcon::PS3)
+                pTexture = systemPlugin->GetTexture(notification_TextureNames[(int)notifyType]); // explore_plugin icons
+            else
+                pTexture = systemPlugin->GetTexture(notification_TextureNames[(int)NotifyIcon::Pen]); // default
+        }
+
+        ShowNotificationBySurfaceTexture(pTexture, text.c_str());
+
+        if (soundType != NotifySound::None)
+            systemPlugin->PlaySound(systemPlugin_SoundNames[(int)soundType]);
+    }
+
 }
 
 #endif // __VSHCOMMON_HPP__
