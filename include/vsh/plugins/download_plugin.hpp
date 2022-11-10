@@ -2,8 +2,7 @@
 #define __DOWNLOAD_PLUGIN_HPP__
 
 // Interface 1
-
-class download_plugin_interface_t
+class DownloadPluginInterface
 {
 public:
     int(*DoUnk0)(int);															// 1 Parameter: int (0-4) - "page_select_destination"
@@ -29,8 +28,7 @@ public:
 
 
 // Interface ACT0 (0x41435430)
-
-class download_plufin_act0_t
+class DownloadPluginAct0
 {
 public:
     int(*Action)(const char *);						// 1 Parameter: char * numbers (Interface 1, func 0)

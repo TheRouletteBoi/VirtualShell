@@ -2,8 +2,7 @@
 #define __WEBBROWSER_PLUGIN_HPP__
 
 // Interface 1
-
-class webbrowser_plugin_interface_t
+class WebbrowserPluginInterface
 {
 public:
     int(*PluginWakeup)(int);													//1 Parameter: int (=usually 0)
@@ -21,8 +20,7 @@ public:
 
 
 // Interface ACT0 (0x41435430)
-
-class webbrowser_plugin_act0_t
+class WebbrowserPluginAct0
 {
 public:
     int(*Action)(const char *);

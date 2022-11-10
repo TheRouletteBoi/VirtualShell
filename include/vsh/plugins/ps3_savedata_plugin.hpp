@@ -2,8 +2,7 @@
 #define __PS3_SAVEDATA_PLUGIN_HPP__
 
 // Interface 1
-
-class ps3_savedata_plugin_interface_t
+class Ps3SavedataPluginInterface
 {
 public:
     int(*DoUnk0)(void);

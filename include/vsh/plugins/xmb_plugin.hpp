@@ -66,12 +66,11 @@ enum class Plugins
 
 
 // Interface XMM0 (0x584D4D30)
-
-class xmb_plugin_xmm0_t
+class XmbPluginXmm0
 {
 public:
     int(*GetPluginIdByName)(const char *);     // char * plugin name - get plugin id by string name
-    char* (*GetPluginNameById)(int);           // int value (Plugin Enum ID) - gets plugin name string by Id
+    char*(*GetPluginNameById)(int);            // int value (Plugin Enum ID) - gets plugin name string by Id
     int(*IsPluginViewAvailable)(int);          // can test if plugin view is available or not. (Result != 0)
     int(*LoadPlugin3)(int, void *, int);       // Loads corresponding plugin and executes the thread for view/interface usage
     int(*LoadPlugin4)(int *);                  // Utility::LoadPlugin, 1 Parameter: uint * { Plugin Enum Id, int, int, int }
@@ -100,8 +99,7 @@ public:
 
 
 // Interface XMB2 (0x584D4232)
-
-class xmb_plugin_xmb2_t
+class XmbPluginXmb2
 {
 public:
     int(*DoUnk0)(int);							// int value (0 - 0x14)
@@ -126,10 +124,10 @@ public:
     int(*DoUnk19)(int, int);                    // int,int (0x0C memsets 2 regions)
     int(*DoUnk20)(void *);						// in:  uint8 [0x38]
     int(*DoUnk21)(void *);						// out: uint8 [0x38]
-    int(*showMsg)(const wchar_t *);				// wchar * - page_xmb_indicator - Shows XMB-Notifications at the bottom like "(Triangle): Options"
-    void* (*DoUnk23)(void);						// returns ptr* ( ptr[0x908] = -1 -> ClearWBoardFocus)
+    int(*ShowMsg)(const wchar_t *);				// wchar * - page_xmb_indicator - Shows XMB-Notifications at the bottom like "(Triangle): Options"
+    void*(*DoUnk23)(void);						// returns ptr* ( ptr[0x908] = -1 -> ClearWBoardFocus)
     int(*DoUnk24)(void);						// - _vshcommon_34A05733 ("xmb_plugin2", 0x15480) - returns some list
-    void* (*DoUnk25)(void);						// returns sys_lwmutex_t * "_pf_lwm"
+    void*(*DoUnk25)(void);						// returns sys_lwmutex_t * "_pf_lwm"
     int(*DoUnk26)(int);							// int value (0=decrease(+page_xmb_fg) + xmb2_interface_7(0,0x1C0/0x40,0x1C0),else=increase (page_xmb_fg))
     int(*DoUnk27)(void);						// - calls category_setting_plugin CAT0 interface #24 + explore_plugin CAT0 interface #24
     int(*DoUnk28)(const char *);				// char* - Example: ""wbrd:show?"" , ""tchat:fullvsh_ps""
@@ -141,8 +139,7 @@ public:
 
 
 // Interface MOD0 (0x4D4F4430)
-
-class xmb_plugin_mod0_t
+class XmbPluginMod0
 {
 public:
     int(*DoUnk0)(void);

@@ -41,7 +41,7 @@ public:
     int(*DoUnk28)(void *, const wchar_t *);									// uint8_t [0x1C], wchar * - rectangle_text
     int(*DoUnk29)(float, int, char *, int, int *, int *, char *, char *);	// notification
     int(*DoUnk30)(const char *);											// char * (Example: "msg_press_ps_button")
-    int(*saveBMP)(const char *);											// char * bmp_path ("%s/screen%03d.bmp") - "saveBMP", takes a XMB screendump (make sure you set a dynamic theme, else console freezes after dump)
+    int(*SaveBMP)(const char *);											// char * bmp_path ("%s/screen%03d.bmp") - "saveBMP", takes a XMB screendump (make sure you set a dynamic theme, else console freezes after dump)
     int(*DoUnk32)(void);													// Set up page_notification
     int(*DoUnk33)(void);													// Dummy XMB start (DEX)
     int(*DoUnk34)(void);													// Dummy XMB stop (DEX)

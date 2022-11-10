@@ -2,8 +2,7 @@
 #define __IMPOSE_PLUGIN_HPP__
 
 // Interface 1
-
-class impose_plugin_interface_t
+class ImposePluginInterface
 {
 public:
     int(*DoUnk0)(int, void *);    // 2 Parameter: int value (1=Blue Screen of Death,2=Red Screen of Death,Else=page_btnnavi), void * ptr_handler

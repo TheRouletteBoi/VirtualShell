@@ -2,8 +2,7 @@
 #define __GAME_EXT_PLUGIN_HPP__
 
 // Interface 1
-
-class game_ext_plugin_interface_t
+class GameExtPluginInterface
 {
 public:
     int(*LoadPage)(void);						// 0 Parameter: (creates page_game_main widget)
@@ -19,7 +18,7 @@ public:
     int(*DoUnk10)(int, void*, void *);			// 3 Parameter:
     int(*DoUnk11)(int, int, void*, void*);		// 4 Parameter: int value (=0 -> npsignin), ignored, uint8 [0x1B4]{message, pkg_path,..},uint8 [0x25]
     int(*DoUnk12)(void*);						// 1 Parameter: uint8 [0x220] - auth_plugin if 5 (0x102,handler,0,0) / msg_only_for_psp_need_copy_ask
-    int(*installTheme)(char*, char*);			// 2 Parameter: char * path, char * message - Theme Install/Copy ? (type: bdc, category: TI, CD_%u.p3t)
+    int(*InstallTheme)(char*, char*);			// 2 Parameter: char * path, char * message - Theme Install/Copy ? (type: bdc, category: TI, CD_%u.p3t)
     int(*DoUnk14)(char*);						// 1 Parameter: char * path? - page_update_history
     int(*DoUnk15)(void);						// 0 Parameter: disables 2 second sleep on ps2bootparam.dat
     int(*DoUnk16)(char*);						// 1 Parameter: strncpy char * [0x20] (TitleId/ContentId?)
@@ -40,7 +39,7 @@ public:
     int(*DoUnk31)(void);						// 0 Parameter: returns uint8
     int(*DoUnk32)(void*, char*, void*, int);    // 4 Parameter: uint8 [0x270], char * [0x800], uint64 [2], uint8
     int(*DoUnk33)(char*);						// 1 Parameter: char * titleid? [0x10] - msg auto update? - psn+/login checked.
-    int(*installPKG)(char*);					// 1 Parameter: char * pkg_path[0x400] (example: /dev_usb006/test.pkg)
+    int(*InstallPKG)(char*);					// 1 Parameter: char * pkg_path[0x400] (example: /dev_usb006/test.pkg)
 };
 
 #endif // __GAME_EXT_PLUGIN_HPP__

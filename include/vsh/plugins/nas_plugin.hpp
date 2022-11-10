@@ -2,8 +2,7 @@
 #define __NAS_PLUGIN_HPP__
 
 // Interface 1
-
-class nas_plugin_interface_t
+class NasPluginInterface
 {
 public:
     int(*DoUnk0)(int);                              // 1 Parameter: int (0 - 0x29) - create nas_dialog, nas_installer, page_nas - page_default_theme / page_wallpaper_theme (0, 1000.0f)

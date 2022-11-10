@@ -2,8 +2,7 @@
 #define __WBOARD_PLUGIN_HPP__
 
 // Interface 1
-
-class wboard_plugin_interface_t
+class WboardPluginInterface
 {
 public:
     int(*DoUnk0)(int);
@@ -13,8 +12,7 @@ public:
 
 
 // Interface ACT0 (0x41435430)
-
-class wboard_plugin_act0_t
+class WboardPluginAct0
 {
 public:
     int(*Action)(char *);
@@ -22,8 +20,7 @@ public:
 
 
 // Interface MOD0 (0x4D4F4430)
-
-class wboard_plugin_mod0_t
+class WboardPluginMod0
 {
 public:
     int(*DoUnk0)(void);

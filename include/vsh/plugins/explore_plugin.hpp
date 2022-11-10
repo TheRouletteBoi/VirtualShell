@@ -2,8 +2,7 @@
 #define __EXPLORE_PLUGIN_HPP__
 
 // Interface 1
-
-class explore_plugin_interface_t
+class ExplorePluginInterface
 {
 public:
     int(*DoUnk0)(int);									// 1 Parameter: int value 0 - 4

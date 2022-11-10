@@ -2,8 +2,7 @@
 #define __FRIENDIM_PLUGIN_HPP__
 
 // Interface 1
-
-class friendim_plugin_interface_t
+class FriendimPluginInterface
 {
 public:
     int(*SetFriendimExit)(void);
