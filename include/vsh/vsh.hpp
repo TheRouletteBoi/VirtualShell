@@ -89,15 +89,20 @@ namespace vsh
     // vsh_196DB98B  // SecureRTCManagerIF_SetRTC  | cellSsSrtcSetRtc
     // vsh_9AF9918E  // SecureRTCManagerIF_SetTime | cellSsSrtcSetTime
 
-    // vsh_3B4A1AC4  // AIMManagerIF_GetDeviceID | cellSsAimGetDeviceId
-    // vsh_3F062337  // AIMManagerIF_GetPSCode   | cellSsAimChkregPsCode
+    int vsh_3B4A1AC4(uint8_t* idps); // AIMManagerIF_GetDeviceID | cellSsAimGetDeviceId
+    static int cellSsAimGetDeviceId(uint8_t out[0x10]) { return vsh_3B4A1AC4(out); }
 
-    //int vsh_9AD2E524(u8 *open_psid[8]);  // sys_ss_get_open_psid | cellSsAimGetOpenPSID
+    int vsh_3F062337(uint8_t* ps_code);  // AIMManagerIF_GetPSCode   | cellSsAimChkregPsCode
+    static int cellSsAimGetPsCode(uint8_t out[0x8]) { return vsh_3F062337(out); }
+
+    int vsh_9AD2E524(uint8_t* open_psid);  // sys_ss_get_open_psid | cellSsAimGetOpenPSID
+    static int cellSsAimGetOpenPSID(uint8_t out[0x10]) { return vsh_9AD2E524(out); }
 
     // vsh_C0E39B97  // cellSsAimIsDEHA (aim_manager_if_get_ps_code)
     // vsh_E35D54E3  // cellSsAimIsDEHXB2
     // vsh_E4A68606  // cellSsAimIsDEHXB
-    // vsh_8F71C2DF  // cellSsAimGetDeviceType
+    int vsh_8F71C2DF(uint8_t* type);  // cellSsAimGetDeviceType
+    static int cellSsAimGetDeviceType(uint8_t out[0x10]) { return vsh_8F71C2DF(out); }
     // vsh_145991B4  // cellSsAimIsARCADE AIMManagerIF: 0x19002 (Get Device Type)
     // vsh_1F80E287  // cellSsAimIsDEH AIMManagerIF: 0x19002 (Get Device Type)
     // vsh_8AD55D80  // cellSsAimIsDEX AIMManagerIF: 0x19002 (Get Device Type)
