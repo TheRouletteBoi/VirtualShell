@@ -104,13 +104,9 @@ static int rand() { return stdc_15BDCC00(); }
 void stdc_0D2A593B(unsigned seed);                                             // srand()
 static void srand(unsigned seed) { return stdc_0D2A593B(seed); }
 
-static int irand(int min, int max) {
-    return min + (rand() % static_cast<int>(max - min + 1));
-}
+static int irand(int min, int max) { return min + (rand() % static_cast<int>(max - min + 1)); }
 
-static float frand(float min, float max) {
-    return min + ((static_cast<float>(rand()) / 0x7fffffff) * (max - min));
-}
+static float frand(float min, float max) { return min + ((static_cast<float>(rand()) / 0x7fffffff) * (max - min)); }
 
 double stdc_18668CE3(double x);                                                // exp()
 static double exp(double x) { return stdc_18668CE3(x); }
@@ -345,31 +341,31 @@ static size_t mbrtowc(wchar_t* pwc, const char* s, size_t n, std::mbstate_t* ps)
 
 /*static int mbtowc(wchar_t* pwc, const char* s, size_t n)
 {
-static mbstate_t mbs;
-size_t rval;
+    static mbstate_t mbs;
+    size_t rval;
 
-if (s == NULL) {
-memset(&mbs, 0, sizeof(mbs));
-return (0);
-}
-rval = mbrtowc(pwc, s, n, &mbs);
-if (rval == (size_t)-1 || rval == (size_t)-2)
-return (-1);
-return ((int)rval);
+    if (s == NULL) {
+        memset(&mbs, 0, sizeof(mbs));
+        return (0);
+    }
+    rval = mbrtowc(pwc, s, n, &mbs);
+    if (rval == (size_t)-1 || rval == (size_t)-2)
+        return (-1);
+    return ((int)rval);
 }
 
 static int wctomb(char* s, wchar_t wchar)
 {
-static mbstate_t mbs;
-size_t rval;
+    static mbstate_t mbs;
+    size_t rval;
 
-if (s == NULL) {
-memset(&mbs, 0, sizeof(mbs));
-return (0);
-}
-if ((rval = wcrtomb(s, wchar, &mbs)) == (size_t)-1)
-return (-1);
-return ((int)rval);
+    if (s == NULL) {
+        memset(&mbs, 0, sizeof(mbs));
+        return (0);
+    }
+    if ((rval = wcrtomb(s, wchar, &mbs)) == (size_t)-1)
+        return (-1);
+    return ((int)rval);
 }*/
 
 
