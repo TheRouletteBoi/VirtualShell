@@ -3,9 +3,11 @@
 
 namespace x3
 {
+    class xBDVD;
+
     CDECL_BEGIN
 
-        // x3_003745F4	_ZN13bXCeXMLParser6ResumeEh	bXCeXMLParser::Resume(unsigned char)
+    // x3_003745F4	_ZN13bXCeXMLParser6ResumeEh	bXCeXMLParser::Resume(unsigned char)
     // x3_05471587	_ZNK7bXCeDoc11GetNodeTypeEP8bXCeNode	bXCeDoc::GetNodeType(bXCeNode *)const
     // x3_059D2C50	_ZNK7bXCeDoc10GetDocRootEv	bXCeDoc::GetDocRoot(void)
     // x3_0793CAA0	_ZNK7bXCeDoc11GetNextAttrEP8bXCeNode	bXCeDoc::GetNextAttr(bXCeNode *)const
@@ -133,6 +135,12 @@ namespace x3
     // x3_FA705F30	xRegistryDeleteKey
     // x3_FBC581BF	_ZN12bXCeAttrList12AddAttributeEPcS0_	bXCeAttrList::AddAttribute(char *, char *)
 
+    xBDVD* x3_9C246A91();
+    static xBDVD* xBDVDGetInstance() { return x3_9C246A91(); }
+
+    CDECL_END
+
+
     class xBDVD
     {
     public:
@@ -146,12 +154,12 @@ namespace x3
     public:
         int(*_BDInitialize)();
         int(*_BDExit)();
-        int(*DoUnk2)(void *);
-        int(*DoUnk3)(int *);
+        int(*DoUnk2)(void*);
+        int(*DoUnk3)(int*);
         int(*Execute)(int, int*, int);
         int(*DoUnk5)(int, int*, int*);
         int(*DoUnk6)(int*, int*, uint64_t, uint64_t*);
-        int(*DoUnk7)(int*, uint64_t, int, uint64_t *);
+        int(*DoUnk7)(int*, uint64_t, int, uint64_t*);
         int(*DoUnk8)(int*);
         int(*DoUnk9)(int*);
         int(*DoUnk10)(int*);
@@ -179,11 +187,6 @@ namespace x3
         int(*DoUnk32)(int);
         int(*DoUnk33)(int*);
     };
-
-    xBDVD* x3_9C246A91();
-    static xBDVD* xBDVDGetInstance() { return x3_9C246A91(); }
-
-    CDECL_END
 }
 
 #endif // __X3_HPP__
