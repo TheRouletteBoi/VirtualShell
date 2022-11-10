@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __VSH_HPP__
+#define __VSH_HPP__
 
 #include <sys/memory.h>
 
@@ -205,3 +206,5 @@ namespace vsh
 
     CDECL_END
 }
+
+#endif // __VSH_HPP__

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __SDK_HPP__
+#define __SDK_HPP__
 
 #include <cell/gcm.h>
 #include <cell/font.h>
@@ -1485,3 +1486,5 @@ void sdk_DF1C334E(void);  // ? sys_rsx_attribute(), base pointer get font lib pt
 // sdk_FF17D731  // avset_addsigctrl (0)
 
 CDECL_END
+
+#endif // __SDK_HPP__

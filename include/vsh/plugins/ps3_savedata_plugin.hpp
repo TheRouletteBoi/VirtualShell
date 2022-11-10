@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __PS3_SAVEDATA_PLUGIN_HPP__
+#define __PS3_SAVEDATA_PLUGIN_HPP__
 
 // Interface 1
 class Ps3SavedataPluginInterface
@@ -63,3 +64,5 @@ public:
     int(*DoUnk56)(void);
     int(*DoUnk57)(void);
 };
+
+#endif  // __PS3_SAVEDATA_PLUGIN_HPP__

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __EXPLORE_PLUGIN_HPP__
+#define __EXPLORE_PLUGIN_HPP__
 
 // Interface 1
 class ExplorePluginInterface
@@ -35,3 +36,5 @@ public:
     int(*DoUnk28)(char *, void *);						// 2 Parameter: char * (ReloadXil/AvcRoomItem/...), uint8 xml?_parameters[]
     int(*DoUnk29)(char *, void *);						// 2 Parameter: char * ,
 };
+
+#endif // __EXPLORE_PLUGIN_HPP__

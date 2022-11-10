@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __MMS_DB_HPP__
+#define __MMS_DB_HPP__
 
 // mms_db_003952CA  // ?
 // mms_db_00725E38  // ?
@@ -563,3 +564,5 @@
 // mms_db_FD49F043	//	_ZNK18MmsSearchParameter25GetSearchProgressCallbackEv	
 // mms_db_FEF03153  // ?
 // mms_db_FF1EA2F5	//	_ZN12DBFileStreamC1Ev	
+
+#endif // __MMS_DB_HPP__

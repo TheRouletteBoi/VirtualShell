@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __VSHMAIN_HPP__
+#define __VSHMAIN_HPP__
 
 #include <sys/process.h>
 
@@ -345,3 +346,5 @@ static int GetScreenshotFlag() { return vshmain_981D7E9F(); }
 
 CDECL_END
 _VSH_END
+
+#endif // __VSHMAIN_HPP__

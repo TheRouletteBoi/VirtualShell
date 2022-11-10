@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __IMPOSE_PLUGIN_HPP__
+#define __IMPOSE_PLUGIN_HPP__
 
 // Interface 1
 class ImposePluginInterface
@@ -24,3 +25,5 @@ public:
     int(*DoUnk17)(int);           // Set impose psbutton notification not ingameXMB, 1 Parameter: uint - (0 = BeginInGameXMB ,1 =  _notification_psbutton)
     int(*DoUnk18)(void);          // 0 Parameter
 };
+
+#endif // __IMPOSE_PLUGIN_HPP__

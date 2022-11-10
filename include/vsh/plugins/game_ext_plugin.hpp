@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __GAME_EXT_PLUGIN_HPP__
+#define __GAME_EXT_PLUGIN_HPP__
 
 // Interface 1
 class GameExtPluginInterface
@@ -40,3 +41,5 @@ public:
     int(*DoUnk33)(char*);						// 1 Parameter: char * titleid? [0x10] - msg auto update? - psn+/login checked.
     int(*InstallPKG)(char*);					// 1 Parameter: char * pkg_path[0x400] (example: /dev_usb006/test.pkg)
 };
+
+#endif // __GAME_EXT_PLUGIN_HPP__

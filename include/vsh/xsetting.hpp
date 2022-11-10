@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __XSETTING_HPP__
+#define __XSETTING_HPP__
 
 class xsetting_0AF1F161_t
 {
@@ -924,3 +925,5 @@ xsetting_ED5B559F_t* xsetting_ED5B559F(void);
 xsetting_F48C0548_t* xsetting_F48C0548(void); // xnet
 xsetting_FFAF9B19_t* xsetting_FFAF9B19(void);
 CDECL_END
+
+#endif // __XSETTING_HPP__

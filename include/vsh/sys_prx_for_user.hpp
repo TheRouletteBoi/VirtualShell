@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __SYS_PRX_FOR_USER_HPP__
+#define __SYS_PRX_FOR_USER_HPP__
 
 #include <sys/synchronization.h> // for sys_lwmutex_t
 #include <sys/mempool.h> // for sys_mempool_t
@@ -387,3 +388,5 @@ namespace sysPrxForUser
 
     CDECL_END
 }
+
+#endif // __SYS_PRX_FOR_USER_HPP__

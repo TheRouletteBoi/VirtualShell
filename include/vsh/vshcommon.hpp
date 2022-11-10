@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __VSHCOMMON_HPP__
+#define __VSHCOMMON_HPP__
 
 #include "paf.hpp"
 #include "vshmain.hpp"
@@ -465,3 +466,5 @@ namespace vsh
     }
 
 }
+
+#endif // __VSHCOMMON_HPP__

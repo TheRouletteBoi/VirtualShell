@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __SYSTEM_PLUGIN_HPP__
+#define __SYSTEM_PLUGIN_HPP__
 
 #define _VSH_BEGIN namespace vsh {
 #define _VSH_END }
@@ -48,3 +49,5 @@ public:
 };
 
 _VSH_END
+
+#endif // __SYSTEM_PLUGIN_HPP__

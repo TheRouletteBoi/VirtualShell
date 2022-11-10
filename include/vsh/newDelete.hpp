@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __NEWDELETE_HPP__
+#define __NEWDELETE_HPP__
 
 #include "sys_prx_for_user.hpp"
 
@@ -117,3 +118,5 @@ void operator delete[](void* ptr, size_t align, void* prt2)
 {
     return operator delete(ptr, align);
 }
+
+#endif // __NEWDELETE_HPP__

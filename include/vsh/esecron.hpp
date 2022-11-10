@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __ESECRON_HPP__
+#define __ESECRON_HPP__
 
 // esecron_0C8D7A60  // ?
 // esecron_179B1B1B  // ?
@@ -46,3 +47,5 @@
 // esecron_EDE5DDD1  // ?
 // esecron_F421B2ED  // ?
 // esecron_F9889F5B  // ?
+
+#endif // __ESECRON_HPP__

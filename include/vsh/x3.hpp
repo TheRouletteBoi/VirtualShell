@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __X3_HPP__
+#define __X3_HPP__
 
 namespace x3
 {
@@ -187,3 +188,5 @@ namespace x3
         int(*DoUnk33)(int*);
     };
 }
+
+#endif // __X3_HPP__

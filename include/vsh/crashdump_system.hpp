@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __CRASHDUMP_SYSTEM_HPP__
+#define __CRASHDUMP_SYSTEM_HPP__
 
 namespace libcrashdump
 {
@@ -9,3 +10,5 @@ namespace libcrashdump
 
     CDECL_END
 }
+
+#endif // __CRASHDUMP_SYSTEM_HPP__

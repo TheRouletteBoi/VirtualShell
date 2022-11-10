@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __ALLOCATOR_HPP__
+#define __ALLOCATOR_HPP__
 
 #include <yvals.h> // for _CSTD
 #include <xstddef> // for _THROW1
@@ -61,3 +62,5 @@ static void* realloc(void* ptr, size_t size) { return allocator_F7A14A22(ptr, si
 
 CDECL_END
 _VSH_END
+
+#endif // __ALLOCATOR_HPP__

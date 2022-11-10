@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __WEBRENDER_PLUGIN_HPP__
+#define __WEBRENDER_PLUGIN_HPP__
 
 // Interface Id 1
 class WebRenderPluginInterface
@@ -25,3 +26,5 @@ public:
     int (*DoUnk3)(void);
     int (*DoUnk4)(void);
 };
+
+#endif // __WEBRENDER_PLUGIN_HPP__

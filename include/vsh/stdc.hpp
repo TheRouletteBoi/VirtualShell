@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __STDC_HPP__
+#define __STDC_HPP__
 
 #include <stdlib.h> // for ldiv_t
 #include <stdio.h> // for FILE
@@ -692,3 +693,5 @@ short stdc_B94B9D13(double *);                                                 /
 
 CDECL_END
 _VSH_END
+
+#endif // __STDC_HPP__

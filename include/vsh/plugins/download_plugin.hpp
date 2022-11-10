@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __DOWNLOAD_PLUGIN_HPP__
+#define __DOWNLOAD_PLUGIN_HPP__
 
 // Interface 1
 class DownloadPluginInterface
@@ -32,3 +33,5 @@ class DownloadPluginAct0
 public:
     int(*Action)(const char *);						// 1 Parameter: char * numbers (Interface 1, func 0)
 };
+
+#endif // __DOWNLOAD_PLUGIN_HPP__

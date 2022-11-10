@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __FRIENDIM_PLUGIN_HPP__
+#define __FRIENDIM_PLUGIN_HPP__
 
 // Interface 1
 class FriendimPluginInterface
@@ -46,3 +47,5 @@ public:
     int(*DoUnk39)(void);
     int(*TellFriend)(void);
 };
+
+#endif // __FRIENDIM_PLUGIN_HPP__
