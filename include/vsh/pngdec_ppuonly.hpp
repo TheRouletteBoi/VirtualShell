@@ -1,5 +1,4 @@
-#ifndef __PNGDEC_PPUONLY_HPP__
-#define __PNGDEC_PPUONLY_HPP__
+#pragma once
 
 #include <cell/codec/pngdec.h>
 
@@ -69,5 +68,3 @@ namespace pngdec
 
     CDECL_END
 }
-
-#endif // __PNGDEC_PPUONLY_HPP__

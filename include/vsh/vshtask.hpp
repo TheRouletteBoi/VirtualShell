@@ -1,5 +1,4 @@
-#ifndef __VSHTASK_HPP__
-#define __VSHTASK_HPP__
+#pragma once
 
 namespace vshtask
 {
@@ -17,5 +16,3 @@ namespace vshtask
 
     CDECL_END
 }
-
-#endif // __VSHTASK_HPP__

@@ -1,5 +1,4 @@
-#ifndef __VSHNET_HPP__
-#define __VSHNET_HPP__
+#pragma once
 
 namespace vshnet
 {
@@ -682,5 +681,3 @@ namespace vshnet
 
     CDECL_END
 }
-
-#endif // __VSHNET_HPP__

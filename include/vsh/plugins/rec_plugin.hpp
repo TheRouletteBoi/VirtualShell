@@ -1,5 +1,4 @@
-#ifndef __REC_PLUGIN_HPP__
-#define __REC_PLUGIN_HPP__
+#pragma once
 
 // Interface 1
 class RecPluginInterface
@@ -14,5 +13,3 @@ public:
     int(*etis)(int start_time_msec); //RecSetInfo
     int(*etie)(int end_time_msec); //RecSetInfo
 };
-
-#endif // __REC_PLUGIN_HPP__

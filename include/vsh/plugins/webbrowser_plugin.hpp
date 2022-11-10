@@ -1,5 +1,4 @@
-#ifndef __WEBBROWSER_PLUGIN_HPP__
-#define __WEBBROWSER_PLUGIN_HPP__
+#pragma once
 
 // Interface 1
 class WebbrowserPluginInterface
@@ -25,5 +24,3 @@ class WebbrowserPluginAct0
 public:
     int(*Action)(const char *);
 };
-
-#endif // __WEBBROWSER_PLUGIN_HPP__

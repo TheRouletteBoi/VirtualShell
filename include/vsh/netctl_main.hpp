@@ -1,5 +1,4 @@
-#ifndef __NETCTL_MAIN_HPP__
-#define __NETCTL_MAIN_HPP__
+#pragma once
 
 namespace netctl
 {
@@ -52,5 +51,3 @@ namespace netctl
     
     CDECL_END
 }
-
-#endif // __NETCTL_MAIN_HPP__

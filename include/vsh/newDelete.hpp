@@ -1,7 +1,6 @@
-#ifndef __NEWDELETE_HPP__
-#define __NEWDELETE_HPP__
+#pragma once
 
-#include "sys_prx_for_user.hpp"
+#include <sys_prx_for_user.hpp>
 
 // Override the new/delete operator cuz the sprx ones are brokey
 // not sure why i crash when using allocator exports so i use the
@@ -118,5 +117,3 @@ void operator delete[](void* ptr, size_t align, void* prt2)
 {
     return operator delete(ptr, align);
 }
-
-#endif // __NEWDELETE_HPP__

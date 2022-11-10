@@ -1,5 +1,4 @@
-#ifndef __GAME_PLUGIN_HPP__
-#define __GAME_PLUGIN_HPP__
+#pragma once
 
 #define _VSH_BEGIN namespace vsh {
 #define _VSH_END }
@@ -118,5 +117,3 @@ public:
 };
 
 _VSH_END
-
-#endif // __GAME_PLUGIN_HPP__

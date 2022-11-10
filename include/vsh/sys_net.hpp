@@ -1,6 +1,4 @@
-// 3141card
-#ifndef __SYS_NET_HPP__
-#define __SYS_NET_HPP__
+#pragma once
 
 #include <netdb.h>
 #include <netex/net.h>
@@ -200,5 +198,3 @@ int32_t sys_net_FDB8F926(sys_net_thread_id_t tid, int32_t flags); // sys_net_fre
 
 CDECL_END
 _VSH_END
-
-#endif // __SYS_NET_HPP__

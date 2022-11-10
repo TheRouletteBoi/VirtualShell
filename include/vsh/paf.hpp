@@ -1,7 +1,6 @@
-#ifndef __PAF_HPP__
-#define __PAF_HPP__
+#pragma once
 
-#include "vsh/stdc.hpp"
+#include <vsh/stdc.hpp>
 #include <string>
 
 namespace paf
@@ -1963,5 +1962,3 @@ namespace paf
     };
 }
 
-
-#endif // __PAF_HPP__

@@ -1,5 +1,4 @@
-#ifndef __XMB_PLUGIN_HPP__
-#define __XMB_PLUGIN_HPP__
+#pragma once
 
 enum class Plugins
 {
@@ -145,5 +144,3 @@ public:
     int(*DoUnk0)(void);
     int(*DoUnk1)(void);
 };
-
-#endif // __XMB_PLUGIN_HPP__

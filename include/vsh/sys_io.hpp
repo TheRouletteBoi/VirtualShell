@@ -1,5 +1,4 @@
-#ifndef __SYS_IO_HPP__
-#define __SYS_IO_HPP__
+#pragma once
 
 #include <cell/pad.h>
 #include <cell/keyboard.h>
@@ -172,5 +171,3 @@ namespace sys_io
 
     CDECL_END
 }
-
-#endif // __SYS_IO_HPP__

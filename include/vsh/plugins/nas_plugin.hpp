@@ -1,5 +1,4 @@
-#ifndef __NAS_PLUGIN_HPP__
-#define __NAS_PLUGIN_HPP__
+#pragma once
 
 // Interface 1
 class NasPluginInterface
@@ -41,5 +40,3 @@ public:
     int(*DoUnk33)(char *, int, unsigned long long *, unsigned long long *); //  4 Parameter: char * [0x100], 0x100, uint64_t * , uint64_t *
     int(*DoUnk34)(void *);                                               //  1 Parameter: void * [0x178?]
 };
-
-#endif // __NAS_PLUGIN_HPP__

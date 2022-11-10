@@ -1,5 +1,4 @@
-#ifndef __WBOARD_PLUGIN_HPP__
-#define __WBOARD_PLUGIN_HPP__
+#pragma once
 
 // Interface 1
 class WboardPluginInterface
@@ -28,5 +27,3 @@ public:
     int(*DoUnk2)(void);
     int(*DoUnk3)(int);
 };
-
-#endif // __WBOARD_PLUGIN_HPP__
