@@ -2017,12 +2017,6 @@ public:
         TextAlignRight = (1 << 1)
     };
 
-    ~PhWidget()
-    {
-        if (IsAttached())
-            Destructor1();
-    }
-
     // Common helpers
     PhWidget& SetName(std::string const& name)
     {
@@ -2061,11 +2055,10 @@ public:
         return *this;
     }
 
-    PhWidget& ClearColor()
+    PhWidget& SetColor(vec4 color)
     {
-        vec4 clear{ 0.0, 0.0, 0.0, 0.0 };
-        SetColor(clear);
-
+        colorScale = color.clamp(0.0, 1.0);
+        KillTimerCB(ColorHandler);
         return *this;
     }
 
@@ -2108,7 +2101,7 @@ public:
     PhWidget* GetLayoutPosValue(PhWidget* widgetTemplate){ return VirtualMethod<PhWidget*>(30, widgetTemplate); }
     PhWidget* GetLayoutSizeValue(PhWidget* widgetTemplate){ return VirtualMethod<PhWidget*>(31, widgetTemplate); }
 
-    void SetColor(vec4& color){ VirtualMethod(32, &color); }
+    void ClearColor(){ VirtualMethod(32); }
     void SetMetaAlpha(float metaAlpha, bool applyToChilds){ VirtualMethod(33, metaAlpha); }
     void SetDefocusBG(float defocus){ VirtualMethod(34, defocus); }
     void SetDefocusFG(float defocus){ VirtualMethod(35, defocus); }
@@ -2224,6 +2217,12 @@ public:
     {
         paf_D0197A7D(this, parent, appear);
     }
+
+    ~PhPlane()
+    { 
+        if (IsAttached()) 
+            paf_0C16A258(this); 
+    }
 };
 
 class PhText : public PhWidget
@@ -2232,6 +2231,12 @@ public:
     PhText(PhWidget* parent, PhAppear* appear)
     {
         paf_7F0930C6(this, parent, appear);
+    }
+
+    ~PhText()
+    { 
+        if (IsAttached()) 
+            paf_738BAAC0(this); 
     }
 
     PhText& RefreshText()
