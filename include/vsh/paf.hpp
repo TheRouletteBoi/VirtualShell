@@ -2062,6 +2062,11 @@ public:
         return *this;
     }
 
+    vec4 GetColor()
+    {
+        return colorScale;
+    }
+
     bool IsAttached()
     {
         if (!name.empty() && parent)
