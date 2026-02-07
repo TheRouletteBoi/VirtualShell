@@ -10,6 +10,17 @@ _VSH_BEGIN
 class GamePluginInterface
 {
 public:
+    struct gameInfo
+    {
+        int unk; // always 1
+        char titleid[16];
+        char titlename[128];
+        char titlename2[128];
+    };
+    struct AppVerInfo
+    {
+        char buf[8];
+    };
     int(*DoUnk0)(void);                                       // 0 Parameter: - set Widget "page_game_main" and activate
     int(*DoUnk1)(void *);                                     // 1 Parameter: uint8_t [0x5B8]
     int(*DoUnk2)(void *);                                     // 1 Parameter: uint8_t [0x230]
@@ -18,9 +29,9 @@ public:
     int(*ExitToUpdate)(void);                                 // 0 Parameter: GameExit to system update
     int(*ReloadGame)(void);                                   // 0 Parameter:
     int(*DoUnk7)(void);                                       // 0 Parameter: - set Widget "page_game_main", pageactivate and paf_55944323 /paf_FA17FC05.
-    int(*GameInfo)(void *);                                   // 1 Parameter: out:uint8_t [0x114] - (+4 = TitleID, +0x14 = Title, +0x94 = Title)
+    int(*GameInfo)(gameInfo&);                                // 1 Parameter: out:uint8_t [0x114] - (+4 = TitleID, +0x14 = Title, +0x94 = Title)
     int(*DoUnk9)(void *);                                     // 1 Parameter: out:char* [0x80]- returns Title
-    int(*DoUnk10)(char *);                                    // 1 Parameter: out:uint8_t [8]
+    int(*GetAppVer)(AppVerInfo&);                             // 1 Parameter: out:uint8_t [8]
     int(*DoUnk11)(unsigned long, int);                        // 2 Parameter: uint64_t data, int (0=12,other=0x13) - EventPortSend 0x100, 0x12/0x13,data
     int(*DoUnk12)(void);                                      // 0 Parameter:
     int(*DoUnk13)(void);                                      // 0 Parameter:
